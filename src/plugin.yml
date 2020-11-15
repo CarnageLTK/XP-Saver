@@ -1,0 +1,9 @@
+name: XPSaver
+version: 1.0
+author: CarnageLTK
+main: xpsaver.Main
+api-version: 1.14
+commands:
+  givexp:
+    description: Stores half of player xp in bottle
+    usage: /<command>
