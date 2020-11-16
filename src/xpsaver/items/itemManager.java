@@ -10,6 +10,9 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.ArrayList;
 import java.util.List;
 
+import static xpsaver.xpConverter.ConvertXP.levelsToXp;
+import static xpsaver.xpConverter.ConvertXP.xpToLevels;
+
 public class itemManager {
 
     public static ItemStack createXP(Player player) {
@@ -17,7 +20,7 @@ public class itemManager {
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName("XP Store");
         List<String> lore = new ArrayList<>();
-        float exp = (player.getLevel())/2;
+        float exp = xpToLevels((levelsToXp(player.getLevel()))/2);
         String expString = String.valueOf(exp);
         player.setLevel(0);
         String name = player.getName();

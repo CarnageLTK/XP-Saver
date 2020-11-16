@@ -12,4 +12,14 @@ public class ConvertXP {
         }
         return -1;
     }
+    public static int xpToLevels(int xp) {
+        if (xp <= 255) {
+            return xp  / 17;
+        }else if (xp > 272 && xp < 887) {
+            return (int) ((Math.sqrt(24 * xp - 5159) + 59) / 6);
+        }else if (xp > 825) {
+            return (int) ((Math.sqrt(56 * xp - 32511) + 303) / 14);
+        }
+        return 0;
+    }
 }
